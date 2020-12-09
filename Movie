@@ -1,0 +1,137 @@
+public class Movie {
+
+
+ int rating, year;
+
+String name, director, description;
+
+
+public Movie(){
+
+ this.name="";
+ this.description="";
+ this.rating=0;
+ this.director="";
+ this.year=0;
+
+}
+
+public Movie(String name, String director, String description) {
+
+this.name = name;
+this.description=description;
+this.director=director;
+
+
+}
+
+public String getName() {
+
+return name;
+
+}
+
+public void setName(String name) {
+
+this.name = name;
+
+}
+
+public String getDirector() {
+
+return director;
+
+}
+
+public void setDirector(String director) {
+
+this.director = director;
+
+}
+
+public String getDescription() {
+
+return description;
+
+}
+
+public void setDescription(String description) {
+
+this.description = description;
+
+}
+
+public int getYear() {
+
+return year;
+
+}
+
+public void setYear(int year) {
+
+this.year = year;
+
+}
+
+public int getRating() {
+
+return rating;
+
+}
+
+public void setRating(int rating) {
+
+this.rating = rating;
+
+}
+
+public boolean equals(Object obj) {
+   if (this == obj)
+       return true;
+   if (obj == null)
+       return false;
+   if (getClass() != obj.getClass())
+       return false;
+
+
+Movie othermovie = (Movie)other;
+
+if (director == null) {
+
+if (other.director != null)
+
+return false;
+
+} else if (!director.equals(other.director))
+
+return false;
+
+if (name == null) {
+
+if (other.name != null)
+
+return false;
+
+} else if (!name.equals(other.name))
+
+return false;
+    return other.year == year;
+}
+
+public int compareTo(Movie other) {
+
+if(other.getName().compareTo(name) == 0) {
+
+return 0;
+
+} else if(other.getName().compareTo(name) > 0) {
+
+return 1;
+
+}
+
+return -1;
+
+}
+
+}
